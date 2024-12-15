@@ -1,0 +1,13 @@
+[
+    "auth",
+    "auth/logout",
+    "auth/oauth/validate",
+
+    "backup",
+    "restore",
+    
+    "custom_templates",
+    "custom_templates/create/file",
+    "custom_templates/create/string",
+    "custom_templates/create/repository"
+]
