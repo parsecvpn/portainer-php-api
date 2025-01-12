@@ -10,6 +10,11 @@ use Portainer\Endpoints\Auth;
 use Portainer\Endpoints\Backup;
 use Portainer\Endpoints\CustomTemplates;
 use Portainer\Endpoints\Docker;
+use Portainer\Endpoints\Endpoints;
+use Portainer\Endpoints\Gitops;
+use Portainer\Endpoints\LDAP;
+use Portainer\Endpoints\Motd;
+use Portainer\Endpoints\Registries;
 class Portainer {
 
     private $username;
@@ -22,6 +27,7 @@ class Portainer {
     private $backup;
     private $customTemplates;
     private $docker;
+    private $endpoints;
 
     public function __construct(string $envPath, string $envName , string $username = null, string $password = null, string $host = null){
         $this->loader();
@@ -58,6 +64,7 @@ class Portainer {
         require_once __DIR__ . "/Endpoints/Backup/Backup.php";
         require_once __DIR__ . "/Endpoints/CustomTemplates/CustomTemplates.php";
         require_once __DIR__ . "/Endpoints/Docker/Docker.php";
+        require_once __DIR__ . "/Endpoints/Endpoints/Endpoints.php";
     }
 
     public function login(){
@@ -236,5 +243,10 @@ class Portainer {
     public function docker(){
         if(!$this->docker) $this->docker = new Docker($this);
         return $this->docker;
+    }
+
+    public function endpoints(){
+        if(!$this->endpoints) $this->endpoints = new Endpoints($this);
+        return $this->endpoints;
     }
 }
