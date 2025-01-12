@@ -28,6 +28,10 @@ class Portainer {
     private $customTemplates;
     private $docker;
     private $endpoints;
+    private $gitops;
+    private $ldap;
+    private $motd;
+    private $registries;
 
     public function __construct(string $envPath, string $envName , string $username = null, string $password = null, string $host = null){
         $this->loader();
@@ -248,5 +252,25 @@ class Portainer {
     public function endpoints(){
         if(!$this->endpoints) $this->endpoints = new Endpoints($this);
         return $this->endpoints;
+    }
+
+    public function gitops(){
+        if(!$this->gitops) $this->gitops = new Gitops($this);
+        return $this->gitops;
+    }
+
+    public function ldap(){
+        if(!$this->ldap) $this->ldap = new LDAP($this);
+        return $this->ldap;
+    }
+
+    public function motd(){
+        if(!$this->motd) $this->motd = new Motd($this);
+        return $this->motd;
+    }
+
+    public function registries(){
+        if(!$this->registries) $this->registries = new Registries($this);
+        return $this->registries;
     }
 }
