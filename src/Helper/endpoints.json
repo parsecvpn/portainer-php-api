@@ -9,5 +9,20 @@
     "custom_templates",
     "custom_templates/create/file",
     "custom_templates/create/string",
-    "custom_templates/create/repository"
+    "custom_templates/create/repository",
+
+    "endpoints",
+    "endpoints/global-key",
+    "endpoints/relations",
+    "endpoints/snapshot",
+
+    "gitops/repo/file/preview",
+
+    "templates/helm",
+
+    "ldap/check",
+    
+    "motd",
+
+    "registries"
 ]
