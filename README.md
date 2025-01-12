@@ -9,6 +9,11 @@ For the full API documentation implemented, please take a look at [https://app.s
 - Backup
 - CustomTemplates
 - Docker
+- Endpoints
+- LDAP
+- Motd
+- Gitops
+- Registries
 
 ## Installation
 
