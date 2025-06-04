@@ -1,14 +1,19 @@
 {
-    "name": "ente/portainer-php-api",
+    "name": "antonydevanchi/portainer-php-api",
     "type": "library",
     "license": "GPL-3.0-only",
-    "version": "0.1",
+    "version": "0.2",
     "description": "A PHP API client for Portainer CE",
     "authors": [
         {
             "name": "Ente",
             "homepage": "https://openducks.org",
             "email": "github@openducks.org"
+        },
+        {
+            "name": "ParsecVPN",
+            "homepage": "https://parsecvpn.online",
+            "email": "support@parsecvpn.online"
         }
     ],
 
