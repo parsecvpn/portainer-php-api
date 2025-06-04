@@ -2,7 +2,7 @@
     "name": "parsecvpn/portainer-php-api",
     "type": "library",
     "license": "GPL-3.0-only",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "A PHP API client for Portainer CE",
     "authors": [
         {
@@ -23,9 +23,9 @@
         "mirazmac/dotenvwriter": "^0.4.0"
     },
     "autoload": {
-        "files": [
-            "src/Portainer.php"
-        ]
+        "psr-4": {
+            "Portainer\\": "src/"
+        }
     },
     "minimum-stability": "stable",
     "prefer-stable": true

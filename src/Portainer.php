@@ -15,6 +15,7 @@ use Portainer\Endpoints\Gitops;
 use Portainer\Endpoints\LDAP;
 use Portainer\Endpoints\Motd;
 use Portainer\Endpoints\Registries;
+
 class Portainer {
 
     private $username;
