@@ -61,7 +61,6 @@ class Portainer {
     }
 
     public function loader(){
-        require_once dirname(__DIR__) . '/vendor/autoload.php';
         require_once __DIR__ . "/Helper/Log.php";
         require_once __DIR__ . "/Exceptions/InvalidCredentials.exceptions.php";
         require_once __DIR__ . "/Endpoints/Auth/Auth.php";
