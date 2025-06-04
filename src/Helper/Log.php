@@ -10,8 +10,8 @@ class Log extends \Exception {
      * @param \Exception|null $previous A reference to the previous exception
      */
     public function __construct($message, $code = 0, \Exception $previous = null){
-        $trace = $this->getTraceAsString() ?? "N/A";
-        $this->error_rep(message: $message, method: $trace);
+        // $trace = $this->getTraceAsString() ?? "N/A";
+        // $this->error_rep(message: $message, method: $trace);
         parent::__construct($message, $code, $previous);
     }
 
@@ -28,20 +28,20 @@ class Log extends \Exception {
      * @param string $method Name of either the method name that called the function or the request method.
      */
     public static function error_rep($message, $method = null){
-        $error_file = self::logrotate(); // file on your fs, e.g. /var/www/html/error.log
-        $version = NULL;
-        if($method == null){
-            $method = @$_SERVER["REQUEST_METHOD"];
-        }
-        $uri = @$_SERVER["REQUEST_URI"];
-        $host = @$_SERVER["HTTP_HOST"];
-        $port = @$_SERVER["SERVER_PORT"];
-        $script = @$_SERVER["SCRIPT_FILENAME"];
-        $name = @$_SERVER["SERVER_NAME"] ?? "N/A";
-        $addr = @$_SERVER["SERVER_ADDR"] ?? "N/A";
-        $rhost = @$_SERVER["REMOTE_HOST"] ?? "N/A";
-        $time = date("[d.m.Y | H:i:s]");
-        error_log("{$time} \"{$message}\"\nURL: {$host}{$uri} \nVersion: {$version} Server IP:{$addr} - Server Name: {$name} - Request Method: '{$method}'\nRemote Addresse: {$addr} - Remote Name: '{$rhost}' - Remote Port: {$port}\nScript Name: '{$script}'\n=======================\n", 3, $error_file);
+        // $error_file = self::logrotate(); // file on your fs, e.g. /var/www/html/error.log
+        // $version = NULL;
+        // if($method == null){
+        //     $method = @$_SERVER["REQUEST_METHOD"];
+        // }
+        // $uri = @$_SERVER["REQUEST_URI"];
+        // $host = @$_SERVER["HTTP_HOST"];
+        // $port = @$_SERVER["SERVER_PORT"];
+        // $script = @$_SERVER["SCRIPT_FILENAME"];
+        // $name = @$_SERVER["SERVER_NAME"] ?? "N/A";
+        // $addr = @$_SERVER["SERVER_ADDR"] ?? "N/A";
+        // $rhost = @$_SERVER["REMOTE_HOST"] ?? "N/A";
+        // $time = date("[d.m.Y | H:i:s]");
+        // error_log("{$time} \"{$message}\"\nURL: {$host}{$uri} \nVersion: {$version} Server IP:{$addr} - Server Name: {$name} - Request Method: '{$method}'\nRemote Addresse: {$addr} - Remote Name: '{$rhost}' - Remote Port: {$port}\nScript Name: '{$script}'\n=======================\n", 3, $error_file);
     
     }
 
