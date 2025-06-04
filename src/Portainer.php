@@ -64,11 +64,6 @@ class Portainer {
     public function loader(){
         require_once __DIR__ . "/Helper/Log.php";
         require_once __DIR__ . "/Exceptions/InvalidCredentials.exceptions.php";
-        require_once __DIR__ . "/Endpoints/Auth/Auth.php";
-        require_once __DIR__ . "/Endpoints/Backup/Backup.php";
-        require_once __DIR__ . "/Endpoints/CustomTemplates/CustomTemplates.php";
-        require_once __DIR__ . "/Endpoints/Docker/Docker.php";
-        require_once __DIR__ . "/Endpoints/Endpoints/Endpoints.php";
     }
 
     public function login(){
